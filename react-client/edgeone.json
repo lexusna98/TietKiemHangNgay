@@ -1,18 +1,14 @@
 {
   "name": "tiet-kiem-hang-ngay",
   "version": "1.0.0",
-  "build": {
-    "command": "npm run build",
-    "output": "build"
-  },
-  "deploy": {
-    "platform": "edgeone",
-    "region": "global",
-    "routes": [
-      {
-        "path": "/*",
-        "destination": "index.html"
-      }
-    ]
-  }
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "outputDirectory": "./build",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/index.html",
+      "statusCode": 301
+    }
+  ]
 }
