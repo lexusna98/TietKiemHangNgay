@@ -4,11 +4,10 @@
   "installCommand": "npm install",
   "buildCommand": "npm run build",
   "outputDirectory": "./build",
-  "redirects": [
+  "rewrites": [
     {
       "source": "/",
-      "destination": "/index.html",
-      "statusCode": 301
+      "destination": "/index.html"
     }
   ]
 }
