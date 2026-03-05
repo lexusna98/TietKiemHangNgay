@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const FILE_PATH = path.join(__dirname, "results.csv");
 
 // Tính số ngày trong năm hiện tại
@@ -60,6 +60,6 @@ app.get("/random", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
