@@ -7,9 +7,10 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   const handleRandom = async () => {
+    console.log(import.meta.env.VITE_API_URL);
     try {
       setLoading(true);
-      const res = await fetch("https://tietkiemhangngay.onrender.com/random");
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/random`);
       const data = await res.json();
 
       if (!res.ok) {
