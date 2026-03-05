@@ -9,7 +9,7 @@ function App() {
   const handleRandom = async () => {
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:5000/random");
+      const res = await fetch("https://tietkiemhangngay.onrender.com//random");
       const data = await res.json();
 
       if (!res.ok) {
